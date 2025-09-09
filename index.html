@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Community Health & Wellness Fair</title>
+  <meta name="description" content="Join us for free health screenings, vaccinations, nutrition education, and community resources at the Community Health & Wellness Fair." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --ink:#182026;
+      --paper:#faf7f2;
+      --accent:#0f766e;
+      --accent-2:#b45309;
+      --card:rgba(255,255,255,.85);
+      --maxw:1100px;
+      --radius:22px;
+    }
+
+    html,body{height:100%}
+    *{box-sizing:border-box}
+    body{
+      margin:0; color:var(--ink); background:var(--paper);
+      font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height:1.6;
+      background-image:
+        linear-gradient(rgba(255,255,255,.90), rgba(255,255,255,.90)),
+        url("assets/back.png"); /* paper texture */
+      background-size:cover; background-attachment:fixed; background-position:center;
+    }
+
+    a{color:var(--accent)}
+
+    header{ position:sticky; top:0; z-index:50; backdrop-filter:saturate(160%) blur(8px);
+      background:rgba(255,255,255,.7); border-bottom:1px solid rgba(0,0,0,.06); }
+    .wrap{ max-width:var(--maxw); margin:0 auto; padding:0 20px; }
+    .nav{ display:flex; align-items:center; justify-content:space-between; gap:16px; padding:12px 0; }
+    .brand{ font-family:"Playfair Display", serif; font-weight:700; font-size:22px; color:#0f4c46; }
+    .menu{ display:flex; gap:18px; flex-wrap:wrap; }
+    .menu a{ text-decoration:none; color:#1f2937; font-weight:700; opacity:.9; }
+    .menu a:hover{ opacity:1; text-decoration:underline; text-decoration-thickness:2px; }
+
+    /* Hero section (centered poster-style image) */
+    .hero {
+      text-align:center;
+      padding:50px 20px;
+    }
+    .hero-inner img {
+      max-width:400px;   /* smaller drawing */
+      width:80%;         /* scales on small screens */
+      height:auto;
+      margin:0 auto 20px;
+      display:block;
+      border-radius:12px; /* optional: soft corners */
+      box-shadow:0 6px 16px rgba(0,0,0,.15); /* optional frame effect */
+    }
+    .hero-title {
+      font-family:"Playfair Display", serif;
+      font-size:clamp(28px, 5vw, 48px);
+      margin:10px 0;
+      color:var(--accent);
+    }
+    .hero-sub {
+      font-size:clamp(16px, 2.2vw, 20px);
+      margin:0 0 18px;
+      opacity:.9;
+    }
+    .cta{ display:flex; gap:12px; flex-wrap:wrap; justify-content:center; }
+    .btn{ display:inline-block; padding:12px 16px; border-radius:999px; font-weight:700; text-decoration:none; }
+    .btn.primary{ background:#10b981; color:#05312c; border:2px solid #064e3b; }
+    .btn.secondary{ background:rgba(255,255,255,.9); color:#0b5f5a; border:2px solid #bdeae1; }
+
+    section{ margin:26px 0; }
+    .paper-card{ background:var(--card); border:1px solid rgba(0,0,0,.06); border-radius:var(--radius); box-shadow:0 12px 26px rgba(0,0,0,.08); padding:24px; }
+    h2{ font-family:"Playfair Display", serif; color:var(--accent); font-size:clamp(22px, 3.2vw, 34px); margin:0 0 10px; }
+
+    .grid{ display:grid; gap:20px; grid-template-columns:1fr; }
+    @media (min-width:900px){ .grid{ grid-template-columns: 1.2fr .8fr; } }
+
+    .features{ display:grid; grid-template-columns:1fr; gap:12px; }
+    @media (min-width:760px){ .features{ grid-template-columns:repeat(2, 1fr); } }
+    .feature{ background:#ffffffd1; border:1px solid rgba(0,0,0,.06); border-radius:16px; padding:14px 16px; }
+    .feature strong{ display:block; margin-bottom:4px; }
+
+    .infobar{ display:grid; gap:12px; grid-template-columns:1fr; }
+    @media (min-width:860px){ .infobar{ grid-template-columns: repeat(3,1fr); } }
+    .info{ background:#ecfdf5; border:1px solid #bbf7d0; border-radius:14px; padding:12px 14px; }
+
+    footer{ text-align:center; color:#4b5563; padding:40px 0 60px; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <div class="brand">Community Health & Wellness Fair</div>
+      <nav class="menu">
+        <a href="#about">About</a>
+        <a href="#whats-happening">What’s Happening</a>
+        <a href="#get-involved">Get Involved</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero section with children’s drawing centered -->
+  <section class="hero">
+    <div class="hero-inner">
+      <img src="assets/front.png" alt="Childlike crayon drawing of a diverse community holding hands under a smiling sun" />
+      <h1 class="hero-title">Community Health & Wellness Fair</h1>
+      <p class="hero-sub">Free screenings • Vaccinations • Nutrition & fitness demos • Community resources</p>
+      <div class="cta">
+        <a class="btn primary" href="#whats-happening">See Services</a>
+        <a class="btn secondary" href="#get-involved">Volunteer / Host a Booth</a>
+      </div>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <section id="about" class="paper-card">
+      <h2>About the Fair</h2>
+      <div class="grid">
+        <div>
+          <p>Everyone deserves a fair chance at good health. Our Community Health & Wellness Fair brings trusted providers and resources directly to the neighborhood — no insurance required. Come for free screenings and vaccines, stay for cooking demos, fitness tips, and friendly conversations with local professionals.</p>
+          <div class="infobar">
+            <div class="info"><strong>Date & Time</strong><br/>Saturday, TBD • 10:00 AM – 4:00 PM</div>
+            <div class="info"><strong>Location</strong><br/>Neighborhood Center, 123 Main St, City, ST</div>
+            <div class="info"><strong>Languages</strong><br/>Multilingual volunteers available</div>
+          </div>
+        </div>
+        <div>
+          <p><strong>Why attend?</strong></p>
+          <ul>
+            <li>Catch health issues early with quick, free checks.</li>
+            <li>Get vaccines and learn practical steps for everyday wellness.</li>
+            <li>Connect with insurance assistance and community programs.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="whats-happening" class="paper-card">
+      <h2>What’s Happening</h2>
+      <div class="features">
+        <div class="feature"><strong>Free Screenings</strong> Blood pressure, blood sugar, cholesterol, BMI</div>
+        <div class="feature"><strong>Dental & Vision</strong> Quick assessments and referrals</div>
+        <div class="feature"><strong>Vaccinations</strong> Flu & COVID-19 (while supplies last)</div>
+        <div class="feature"><strong>Nutrition & Fitness</strong> Cooking demos, label-reading, mini-workouts</div>
+        <div class="feature"><strong>Healthy Tastings</strong> Try easy, budget-friendly recipes</div>
+        <div class="feature"><strong>Resource Booths</strong> Insurance, Medicaid/Medicare, housing & more</div>
+      </div>
+    </section>
+
+    <section id="get-involved" class="paper-card">
+      <h2>Get Involved</h2>
+      <p>We welcome volunteers and community partners! Help with check-in, translation, kids’ activities, or host a booth to share your services.</p>
+      <ul>
+        <li><strong>Volunteer:</strong> 3-hour shifts available. Training provided.</li>
+        <li><strong>Organizations:</strong> Apply for a booth or sponsor a service station.</li>
+      </ul>
+      <p><a class="btn primary" href="#contact">Contact Us</a></p>
+    </section>
+
+    <section id="contact" class="paper-card">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:healthfair@example.org">healthfair@example.org</a> • Phone: (555) 555-0123</p>
+      <p>Follow updates on social: <a href="#">@CommunityHealthFair</a></p>
+      <p><em>Accessibility:</em> Venue is wheelchair accessible; ASL and language support available.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>© 2025 Community Health & Wellness Fair</p>
+    </div>
+  </footer>
+</body>
+</html>
